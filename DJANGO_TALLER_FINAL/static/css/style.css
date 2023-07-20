@@ -1,0 +1,70 @@
+body {
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-negro-degradado-cubos_23-2149159610.jpg?w=740&t=st=1689888017~exp=1689888617~hmac=96acf58e8aaa17285653cbba6d761baf687441ce7038295963e7f41f8ce7e1ae);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 50%);
+  opacity: 0;
+  animation: rotateGrad 4s linear infinite;
+  transform-origin: center center;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateGrad {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 24px;
+  margin: 10px 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
